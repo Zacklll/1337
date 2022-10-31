@@ -6,7 +6,7 @@
 /*   By: zael-wad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 16:26:19 by zael-wad          #+#    #+#             */
-/*   Updated: 2022/10/29 22:30:29 by zael-wad         ###   ########.fr       */
+/*   Updated: 2022/10/31 20:19:16 by zael-wad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,8 +125,3 @@ char	**ft_split(char const *st, char c)
 	str = cpy(st, str, c);
 	return (str);
 }
-// int main() {
-//   char **p = ft_split("+++++", '+');
-//   printf("%s",p[0]);
-//   return 0;
-// }

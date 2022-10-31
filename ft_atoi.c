@@ -6,7 +6,7 @@
 /*   By: zael-wad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 03:22:34 by zael-wad          #+#    #+#             */
-/*   Updated: 2022/10/29 20:54:35 by zael-wad         ###   ########.fr       */
+/*   Updated: 2022/10/30 18:32:56 by zael-wad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *at)
 {
-	int	i;
-	int	result;
-	int	sig;
+	int				i;
+	unsigned long	result;
+	int				sig;
 
 	i = 0;
 	sig = 1;
@@ -32,6 +32,10 @@ int	ft_atoi(const char *at)
 	while (at[i] >= '0' && at[i] <= '9')
 	{
 		result = result * 10 + at[i] - '0';
+		if (result >= 9223372036854775807 && sig == 1)
+			return (-1);
+		else if (result > 9223372036854775807 && sig == -1)
+			return (0);
 		i++;
 	}
 	return (sig * result);

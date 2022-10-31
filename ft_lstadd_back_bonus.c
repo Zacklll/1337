@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back_bouns.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zael-wad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/29 23:22:39 by zael-wad          #+#    #+#             */
-/*   Updated: 2022/10/29 23:40:01 by zael-wad         ###   ########.fr       */
+/*   Created: 2022/10/30 20:34:15 by zael-wad          #+#    #+#             */
+/*   Updated: 2022/10/31 17:03:43 by zael-wad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*ptr;
+	t_list	*p;
 
-	ptr = malloc(sizeof(t_list));
-	if (!ptr)
-		return (0);
-	ptr->content = content;
-	ptr->next = NULL;
-	return (ptr);
+	if (new == NULL)
+		return ;
+	if (lst == NULL || *lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	p = *lst;
+	while (p->next)
+	{
+		p = p->next;
+	}
+	p->next = new;
 }

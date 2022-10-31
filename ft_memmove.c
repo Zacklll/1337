@@ -6,7 +6,7 @@
 /*   By: zael-wad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 22:39:20 by zael-wad          #+#    #+#             */
-/*   Updated: 2022/10/29 22:45:51 by zael-wad         ###   ########.fr       */
+/*   Updated: 2022/10/31 20:19:05 by zael-wad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,3 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 	}
 	return (s1);
 }
-// int main()
-// {
-// 	printf ("%s",ft_memmove("dfdf","dfdf",3));
-// 	//printf ("%s",memmove(,"dfdf",3));
-// }

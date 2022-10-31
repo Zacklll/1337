@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: zael-wad <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/21 15:23:43 by zael-wad          #+#    #+#              #
-#    Updated: 2022/10/29 18:25:08 by zael-wad         ###   ########.fr        #
+#    Updated: 2022/10/31 17:28:05 by zael-wad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,13 +50,22 @@ SRCS =  ft_memset.c\
  
 OBJS = $(SRCS:.c=.o)
 
+OBJSB = ft_lstadd_back_bonus.o\
+        ft_lstlast_bonus.o\
+        ft_lstnew_bonus.o\
+        ft_lstsize_bonus.o\
+        ft_lstadd_front_bonus.o\
+
 all: $(NAME)
+
+bonus : $(OBJSB)
+	ar rc $(NAME) $(OBJSB)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
 
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) $(OBJSB)
 
 fclean: clean
 	rm -f $(NAME)

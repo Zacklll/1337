@@ -1,15 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zael-wad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/29 20:10:31 by zael-wad          #+#    #+#             */
-/*   Updated: 2022/10/29 20:55:11 by zael-wad         ###   ########.fr       */
+/*   Created: 2022/10/30 17:53:35 by zael-wad          #+#    #+#             */
+/*   Updated: 2022/10/31 20:20:52 by zael-wad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-// #include<string.h>
-// #include<stdio.h>
+#include "libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
+{
+	if (!lst)
+		return (0);
+	while (lst->next)
+	{
+		lst = lst->next;
+	}
+	return (lst);
+}

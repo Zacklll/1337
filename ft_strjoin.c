@@ -6,7 +6,7 @@
 /*   By: zael-wad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:35:00 by zael-wad          #+#    #+#             */
-/*   Updated: 2022/10/29 16:44:51 by zael-wad         ###   ########.fr       */
+/*   Updated: 2022/10/31 20:19:22 by zael-wad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (str);
 }
-
-/*int main()
-{
-	char	t[];
-	char	b[];
-
-    t[] = "";
-    b[] = "";
-    printf("%s", ft_strjoin(t,b));
-}
-*/
